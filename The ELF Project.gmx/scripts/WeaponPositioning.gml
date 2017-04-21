@@ -1,4 +1,0 @@
-if WeaponType = "Sword"
-    {
-    SwordPositions()
-    }
