@@ -1,0 +1,4 @@
+if PlayerClass = "Knight"
+    {
+    GetKnightAnimations();
+    }
