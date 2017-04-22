@@ -25,23 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(keyboard_check_pressed(ord('R')))game_restart();
+            <string>//if(keyboard_check_pressed(vk_up))room_speed+=10;
+//if(keyboard_check_pressed(vk_down))room_speed-=10;
+
+if(keyboard_check_pressed(ord('R')))game_restart();
 if(keyboard_check_pressed(vk_escape))game_end();
 draw_set_color(c_white);
 draw_set_font(fnt_general);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 
 
-draw_text(room_width/2,40,"Sprinting: "+string(obj_player.sprinting));
+//draw_text(room_width/2,0,"room_speed: "+string(room_speed));
 
-/*
-draw_text(20,20,obj_player.alarm[1]);
-draw_text(20,30,obj_player.x);
-draw_text(20,40,obj_player.y);
-draw_text(20,50,obj_player.double_tap);
-draw_text(20,60,obj_player.move_speed);
-draw_text(20,70,obj_player.sprinting);
+var x_place = 0;
+draw_text(x_place,0,"x: "+string(obj_player.x));
+draw_text(x_place,20,"y: "+string(obj_player.y));
+draw_text(x_place,40,"Sprinting: "+string(obj_player.sprinting));/*
+draw_text(x_place,60,"alarm[1]"+string(obj_player.alarm[1]));
+draw_text(x_place,80,"double_tap"+string(obj_player.double_tap));
+draw_text(x_place,100,"joy-stick-right"+string(gamepad_axis_value(0,gp_axislh)));
+//draw_text(x_place,120,"joy-stick-left"+string(obj_player.key_left));
+
+
+//draw_text(20,60,obj_player.move_speed);
+//draw_text(20,70,obj_player.sprinting);
 </string>
           </argument>
         </arguments>
