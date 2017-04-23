@@ -1,4 +1,5 @@
 ///scr_player_movement
+//Location: obj_player step_event
 
 //----------Warning!! Never have objects in floating values!!!!------------------
 
@@ -22,7 +23,7 @@ if(place_meeting(x,y+1,obj_wall))
     grounded = true;
     air_jumps = 1;
     alarm[0] = -1;
-    if(key_jump)
+    if(key_jump)//Performs the jump
     {
         vsp = -jump_speed;
     }

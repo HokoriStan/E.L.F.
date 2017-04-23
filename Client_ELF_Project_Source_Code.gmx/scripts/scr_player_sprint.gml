@@ -1,58 +1,78 @@
 ///scr_player_sprint
-var key_double_right = keyboard_check_pressed(ord('D'));
-var key_double_left = -keyboard_check_pressed(ord('A'));
+//Location: obj_player step_event
+var key_double_right = keyboard_check_pressed(ord('D')) || (gamepad_button_check_pressed(0,gp_padr)) || (gamepad_axis_value(0,gp_axislh)>0)&&(!joystick_limit);
+var key_double_left = -(keyboard_check_pressed(ord('A')) || (gamepad_button_check_pressed(0,gp_padl)) || (gamepad_axis_value(0,gp_axislh)<0)&&(!joystick_limit));
 
 
-if(key_double_right==1 && double_tap<2)
+//joystick_limit will treat the joystick as check_pressed
+if(key_right>0 || key_left<0)joystick_limit = true;
+else joystick_limit = false;
+
+//only perform these when on ground
+if(grounded)
 {
-    if(double_tap<0)
+    if(key_double_right==1 && double_tap<3)//This will increment the double_tap
     {
-        double_tap = 0;
+        if(double_tap<0)//if double_tap is in the negatives, then set it to 0 because we want to go in the positives
+        {
+            double_tap = 0;
+        }
+        alarm[1]=15;
+        double_tap++;//increment
     }
-    alarm[1]=15;
-    double_tap++;
-}
-else if(key_double_left==-1 && double_tap>-2)
-{
-    if(double_tap>0)
+    else if(key_double_left==-1 && double_tap>-3)//This will decrement the double_tap
     {
-        double_tap = 0;
+        if(double_tap>0)//if double_tap is in the positives, then set it to 0 because we want to go in the negatives
+        {
+            double_tap = 0;
+        }
+        alarm[1]=15;
+        double_tap--;//decrement
     }
-    alarm[1]=15;
-    double_tap--;
+    
+    
+    //sets the sprinting true
+    if(double_tap == 2 || double_tap == -2)
+    {
+        sprinting = true;
+    }
 }
 
-
-if(key_right==0 && double_tap == 2)
-{
-    double_tap = 0;
-}
-else if(key_left==0 && double_tap == -2)
-{
-    double_tap = 0;
-}
-
-
-
-
-
-
-
-if(double_tap == 2 || double_tap == -2)
-{
-    sprinting = true;
-}
-
-if(key_left==-1 && key_right==1)
+//If double_tap gets to 3, set it to 1
+//If double_tap gets to -3, set it to -1
+if(double_tap==3)
 {
     sprinting = false;
+    double_tap = 1;
 }
-
-if(key_left==0 && key_right==0)
+else if(double_tap==-3)
 {
     sprinting = false;
+    double_tap = -1;
 }
 
+//this will only trigger when alarm[1] = -1
+if(alarm[1]==-1)
+{   
+    //if both left and right keys are pressed, then set sprinting to false
+    if(key_left==-1 && key_right==1)
+    {
+        sprinting = false;
+    }
+    
+    //if both left and right keys are not pressed, then set sprinting to false
+    if(key_left==0 && key_right==0)
+    {
+        sprinting = false;
+    }
+}
+
+
+
+
+
+
+//this deals with the speed whenever sprinting is true or false
 if(sprinting)move_speed = 6;
 else move_speed = 3;
 
