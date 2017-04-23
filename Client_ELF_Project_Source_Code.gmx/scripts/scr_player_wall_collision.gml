@@ -1,4 +1,5 @@
 ///scr_player_wall_collision
+//Location: obj_player step_event
 
 //Horizontal Wall Collision
 if(place_meeting(x+hsp,y,obj_wall))

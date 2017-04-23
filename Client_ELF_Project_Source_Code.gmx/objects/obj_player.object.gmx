@@ -40,11 +40,13 @@ double_tap = 0;
 //Booleans
 grounded = false;
 sprinting = false;
-
+joystick_limit = false;
 
 //Direction
 dir = 1;
 
+//set the controller deadzone
+gamepad_set_axis_deadzone(0,0.7);
 </string>
           </argument>
         </arguments>
@@ -69,7 +71,8 @@ dir = 1;
             <kind>1</kind>
             <string>///SPRINT CHECK
 
-if(double_tap &lt; 2 &amp;&amp; double_tap &gt; -2)
+//this will set double_tap back to 0
+if(double_tap &lt; 3 &amp;&amp; double_tap &gt; -3)
 {
     double_tap = 0;
 }
@@ -124,7 +127,7 @@ if(vsp &lt;= grav_cap)vsp += grav;
             <string>///Player Controls, Player Movement, And Wall Collision
 scr_player_controls();
 scr_player_movement();
-if(grounded)scr_player_sprint();
+scr_player_sprint();
 scr_player_wall_collision();
 </string>
           </argument>
