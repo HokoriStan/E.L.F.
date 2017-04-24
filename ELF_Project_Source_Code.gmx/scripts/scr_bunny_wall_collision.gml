@@ -1,9 +1,5 @@
-///scr_player_movement
+///scr_bunny_wall_collision
 
-move = key_left + key_right;
-hsp = move * move_speed;
-
-if(!grounded)if(alarm[0]==-1)alarm[0]=3;
 
 //Horizontal Wall Collision
 if(place_meeting(x+hsp,y,obj_wall))
