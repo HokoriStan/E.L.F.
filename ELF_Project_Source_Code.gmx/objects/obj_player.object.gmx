@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///INIT
 scr_player_init(2,5,7,1,1);
+
+instance_create(x,y,obj_camera);
+instance_create(x,y,obj_camera_follow);
 </string>
           </argument>
         </arguments>

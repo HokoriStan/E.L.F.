@@ -28,4 +28,4 @@ joystick_limit = false;
 dir = 1;
 
 //set the controller deadzone
-gamepad_set_axis_deadzone(0,0.7);
+gamepad_set_axis_deadzone(0,0.5);
