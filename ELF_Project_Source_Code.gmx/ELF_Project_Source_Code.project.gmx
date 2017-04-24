@@ -9,12 +9,13 @@
     <sprites name="Player_Characters">
       <sprite>sprites\spr_player</sprite>
     </sprites>
-    <sprites name="Wall">
-      <sprite>sprites\spr_wall</sprite>
-    </sprites>
     <sprites name="Animals">
       <sprite>sprites\spr_bunny</sprite>
     </sprites>
+    <sprites name="Wall">
+      <sprite>sprites\spr_wall</sprite>
+    </sprites>
+    <sprite>sprites\spr_camera_point</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -48,6 +49,10 @@
         <object>objects\obj_bunny_spawner</object>
         <object>objects\obj_bunny</object>
       </objects>
+    </objects>
+    <objects name="Camera">
+      <object>objects\obj_camera</object>
+      <object>objects\obj_camera_follow</object>
     </objects>
   </objects>
   <rooms name="rooms">
