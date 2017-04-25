@@ -6,7 +6,7 @@
   <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_player</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -112,6 +112,7 @@ scr_player_controls();
 scr_player_movement();
 scr_player_sprint();
 scr_player_wall_collision();
+scr_player_animation();
 </string>
           </argument>
         </arguments>
@@ -134,7 +135,7 @@ scr_player_wall_collision();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_shadow();
+            <string>scr_shadow(spr_elf_idle);
 draw_self();
 
 
