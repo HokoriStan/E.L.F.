@@ -139,7 +139,7 @@ scr_bunny_wall_collision();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_shadow();
+            <string>scr_shadow(spr_bunny);
 draw_self();
 
 

@@ -16,6 +16,10 @@ grav = arg_grav;
 hsp = 0;
 vsp = 0;
 
+//state
+state = 0;//zero meaning free
+
+
 //sprint prep
 double_tap = 0;
 
