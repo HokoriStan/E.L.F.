@@ -26,10 +26,42 @@
           <argument>
             <kind>1</kind>
             <string>///INIT
-scr_player_init(2,5,7,1,1);
+scr_player_init(1,3,7,1,1);
 
 instance_create(x,y,obj_camera);
 instance_create(x,y,obj_camera_follow);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+
+
+
+
+
+alarm[2] = 60;
 </string>
           </argument>
         </arguments>
@@ -137,7 +169,6 @@ scr_player_animation();
             <kind>1</kind>
             <string>scr_shadow(spr_elf_idle);
 draw_self();
-
 
 </string>
           </argument>

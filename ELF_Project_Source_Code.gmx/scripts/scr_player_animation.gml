@@ -15,12 +15,12 @@ if(grounded)
             }
             else if(hsp!=0 && !sprinting) 
             {
-                image_speed = 0.2;
+                image_speed = 0.15;
                 sprite_index = spr_elf_walking;
             }
             else if(hsp!=0 && sprinting) 
             {
-                image_speed = 0.3;
+                image_speed = 0.18;
                 sprite_index = spr_elf_running;
             }
         break;
@@ -33,7 +33,7 @@ else if(!grounded)
         case 0:
             if(vsp<=-3)
             {
-                image_speed = 0.3;
+                image_speed = 0.25;
                 sprite_index = spr_elf_up_jump;
             }
             else if(vsp>-3&&vsp<1)
@@ -43,7 +43,7 @@ else if(!grounded)
             }
             else if(vsp>0)
             {
-                image_speed = 0.3;
+                image_speed = 0.25;
                 sprite_index = spr_elf_falling;
             }
         break;
