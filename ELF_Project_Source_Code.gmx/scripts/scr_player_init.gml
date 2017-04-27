@@ -20,11 +20,16 @@ vsp = 0;
 state = 0;//zero meaning free
 
 
+//indexes
+crouch_index = 0;
+
+
 //sprint prep
 double_tap = 0;
 
 //Booleans
 grounded = false;
+go_through = false;//for ledges
 sprinting = false;
 joystick_limit = false;
 
