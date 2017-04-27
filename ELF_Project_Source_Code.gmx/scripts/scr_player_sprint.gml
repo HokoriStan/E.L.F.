@@ -1,7 +1,7 @@
 ///scr_player_sprint
 //Location: obj_player step_event
-var key_double_right = keyboard_check_pressed(ord('D')) || (gamepad_button_check_pressed(0,gp_padr)) || (gamepad_axis_value(0,gp_axislh)>0)&&(!joystick_limit);
-var key_double_left = -(keyboard_check_pressed(ord('A')) || (gamepad_button_check_pressed(0,gp_padl)) || (gamepad_axis_value(0,gp_axislh)<0)&&(!joystick_limit));
+var key_double_right = keyboard_check_pressed(vk_right) || (gamepad_button_check_pressed(0,gp_padr)) || (gamepad_axis_value(0,gp_axislh)>0)&&(!joystick_limit);
+var key_double_left = -(keyboard_check_pressed(vk_left) || (gamepad_button_check_pressed(0,gp_padl)) || (gamepad_axis_value(0,gp_axislh)<0)&&(!joystick_limit));
 
 
 //joystick_limit will treat the joystick as check_pressed

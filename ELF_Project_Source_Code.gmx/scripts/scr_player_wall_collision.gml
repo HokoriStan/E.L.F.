@@ -1,6 +1,9 @@
 ///scr_player_wall_collision
 //Location: obj_player step_event
 
+
+
+
 //Horizontal Wall Collision
 if(place_meeting(x+hsp,y,obj_wall))
 {
@@ -12,7 +15,6 @@ if(place_meeting(x+hsp,y,obj_wall))
 }
 x += hsp;
 
-
 //Vertical Wall Collision
 if(place_meeting(x,y+vsp,obj_wall))
 {
@@ -23,3 +25,20 @@ if(place_meeting(x,y+vsp,obj_wall))
     vsp = 0;
 }
 y += vsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
