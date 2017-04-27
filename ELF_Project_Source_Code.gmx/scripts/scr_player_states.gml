@@ -17,4 +17,8 @@ switch(state)
         if(hsp!=0)state=0;
         if(!grounded)state=0;
     break;
+    
+    case 3:
+        vsp = 1;
+    break;
 }

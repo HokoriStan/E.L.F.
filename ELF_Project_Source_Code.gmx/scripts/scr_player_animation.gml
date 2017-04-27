@@ -87,5 +87,10 @@ else if(!grounded)
                 sprite_index = spr_elf_falling;
             }
         break;
+        
+        case 3:
+            sprite_index = spr_elf_wall_cling;
+            image_xscale = dir*-1;
+        break;
     }
 }
