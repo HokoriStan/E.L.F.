@@ -162,7 +162,7 @@ scr_player_crouching();
 scr_player_states();
 scr_player_sprint();
 scr_player_wall_collision();
-if(!grounded&amp;&amp;vsp&gt;=0)scr_player_wall_cling();
+if(!grounded&amp;&amp;vsp&gt;=0&amp;&amp;wall_jump_recover)scr_player_wall_cling();
 if(!go_through)scr_player_ledge_collision();
 scr_player_animation();
 </string>
