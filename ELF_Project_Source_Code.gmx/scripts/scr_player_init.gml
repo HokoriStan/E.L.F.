@@ -33,6 +33,7 @@ go_through = false;//for ledges
 sprinting = false;
 joystick_limit = false;
 wall_jump = false;
+wall_jump_recover = true;
 
 //Direction
 dir = 1;

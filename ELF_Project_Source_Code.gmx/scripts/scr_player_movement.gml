@@ -26,6 +26,7 @@ else var ledge = instance_place(x,y+1,obj_ledge);
 if(place_meeting(x,y+1,obj_wall))||(place_meeting(x,y+1,obj_ledge)&&ledge!=noone&&bbox_bottom<=ledge.bbox_top&&vsp>=0&&!go_through)
 {
     grounded = true;
+    wall_jump_recover = true;
     air_jumps = 1;
     alarm[0] = -1;
     if(key_jump&&!key_down)//Performs the jump

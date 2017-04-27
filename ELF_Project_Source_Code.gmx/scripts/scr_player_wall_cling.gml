@@ -27,6 +27,7 @@ if(clinging)
     if(key_jump)
     {
         alarm[3] = 10;
+        wall_jump_recover = false;
         wall_jump = true;
         state = 0;
         vsp = -jump_speed;
