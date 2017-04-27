@@ -4,7 +4,8 @@
 //----------Warning!! Never have objects in floating values!!!!------------------
 
 //Horizontal Movement
-move = key_left + key_right;
+if(!wall_jump)move = key_left + key_right;
+else move = wall_jump_dir;
 hsp = move * move_speed;
 
 //Direction
@@ -21,7 +22,7 @@ if(!grounded)if(alarm[0]==-1)alarm[0]=2;
 
 if(vsp>0)var ledge = instance_place(x,y+vsp,obj_ledge);
 else var ledge = instance_place(x,y+1,obj_ledge);
-//var ledge = place_meeting(x,y+1,obj_ledge);
+
 if(place_meeting(x,y+1,obj_wall))||(place_meeting(x,y+1,obj_ledge)&&ledge!=noone&&bbox_bottom<=ledge.bbox_top&&vsp>=0&&!go_through)
 {
     grounded = true;
@@ -49,7 +50,7 @@ if(!grounded && air_jumps > 0)
     }
 }
 
-
+if(vsp<0)&&(!key_jump_held) vsp = floor(max(vsp,-jump_speed/4 ));
 
 
 
