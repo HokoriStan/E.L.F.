@@ -7,7 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Player_Characters">
-      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_player_hitbox</sprite>
       <sprites name="elf_template">
         <sprite>sprites\spr_elf_idle</sprite>
         <sprite>sprites\spr_elf_walking</sprite>
@@ -15,6 +15,8 @@
         <sprite>sprites\spr_elf_up_jump</sprite>
         <sprite>sprites\spr_elf_mid_jump</sprite>
         <sprite>sprites\spr_elf_falling</sprite>
+        <sprite>sprites\spr_elf_crouch</sprite>
+        <sprite>sprites\spr_elf_wall_cling</sprite>
       </sprites>
     </sprites>
     <sprites name="Animals">
@@ -22,6 +24,7 @@
     </sprites>
     <sprites name="Wall">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_ledge</sprite>
     </sprites>
     <sprite>sprites\spr_camera_point</sprite>
     <sprites name="Backgrounds">
@@ -42,16 +45,6 @@
     <backgrounds name="Tile_Sets">
       <background>background\background13</background>
     </backgrounds>
-    <backgrounds name="Forest">
-      <background>background\bg_depth1</background>
-      <background>background\bg_depth2</background>
-      <background>background\bg_depth3</background>
-      <background>background\bg_depth4</background>
-      <background>background\bg_depth4_bushes</background>
-      <background>background\bg_light_raybig</background>
-      <background>background\bg_light_raynormal</background>
-      <background>background\bg_light_raysmall</background>
-    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -59,8 +52,11 @@
       <script>scripts\scr_player_init.gml</script>
       <script>scripts\scr_player_controls.gml</script>
       <script>scripts\scr_player_movement.gml</script>
+      <script>scripts\scr_player_crouching.gml</script>
+      <script>scripts\scr_player_states.gml</script>
       <script>scripts\scr_player_sprint.gml</script>
       <script>scripts\scr_player_wall_collision.gml</script>
+      <script>scripts\scr_player_ledge_collision.gml</script>
       <script>scripts\scr_player_animation.gml</script>
     </scripts>
     <scripts name="Animals">
@@ -80,9 +76,13 @@
     <font>fonts\fnt_general</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_debugger</object>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+    </objects>
+    <objects name="Walls">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_ledge</object>
+    </objects>
     <objects name="Animals">
       <objects name="Bunnies">
         <object>objects\obj_bunny_spawner</object>
@@ -97,6 +97,7 @@
       <object>objects\obj_ray_spawner</object>
       <object>objects\obj_ray</object>
     </objects>
+    <object>objects\obj_debugger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>

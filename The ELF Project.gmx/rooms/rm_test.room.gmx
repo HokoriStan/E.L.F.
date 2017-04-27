@@ -60,13 +60,13 @@
     <instance objName="obj_birdspot" x="740" y="426" name="inst_FC459173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_worm" x="560" y="480" name="inst_7403B990" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_bunny" x="736" y="468" name="inst_CFDB305E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="192" y="384" name="inst_10EBEEE7" locked="0" code="isSolid = false;&#xA;" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="192" y="384" name="inst_10EBEEE7" locked="0" code="isSolid = false;" scaleX="14" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controler" x="70" y="28" name="inst_F471D7A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_playerweapon" x="52" y="78" name="inst_368A5F3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_player" x="160" y="448" name="inst_964A1088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="416" name="inst_94FD7659" locked="0" code="isSolid = false;&#xA;" scaleX="5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="320" y="448" name="inst_290B61A2" locked="0" code="isSolid = false;&#xA;" scaleX="10" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="192" y="448" name="inst_D38D1968" locked="0" code="isSolid = false;&#xA;" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="192" y="448" name="inst_D38D1968" locked="0" code="isSolid = false;" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_ground" x="704" y="384" w="32" h="32" xo="224" yo="0" id="10000044" name="inst_0C4450F2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
