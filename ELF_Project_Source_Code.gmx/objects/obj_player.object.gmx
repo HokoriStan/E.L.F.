@@ -37,6 +37,29 @@ instance_create(x,y,obj_camera_follow);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>wall_jump = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -139,6 +162,7 @@ scr_player_crouching();
 scr_player_states();
 scr_player_sprint();
 scr_player_wall_collision();
+if(!grounded&amp;&amp;vsp&gt;=0)scr_player_wall_cling();
 if(!go_through)scr_player_ledge_collision();
 scr_player_animation();
 </string>
@@ -169,7 +193,7 @@ scr_shadow(spr_elf_idle);
 draw_self();
 
 
-//draw_text(x,y-32,go_through);
+draw_text(x,y-32,state);
 </string>
           </argument>
         </arguments>

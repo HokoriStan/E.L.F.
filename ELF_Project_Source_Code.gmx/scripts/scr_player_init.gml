@@ -32,9 +32,11 @@ grounded = false;
 go_through = false;//for ledges
 sprinting = false;
 joystick_limit = false;
+wall_jump = false;
 
 //Direction
 dir = 1;
+wall_jump_dir = 0;
 
 //set the controller deadzone
 gamepad_set_axis_deadzone(0,0.5);

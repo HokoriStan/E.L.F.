@@ -56,6 +56,7 @@
       <script>scripts\scr_player_states.gml</script>
       <script>scripts\scr_player_sprint.gml</script>
       <script>scripts\scr_player_wall_collision.gml</script>
+      <script>scripts\scr_player_wall_cling.gml</script>
       <script>scripts\scr_player_ledge_collision.gml</script>
       <script>scripts\scr_player_animation.gml</script>
     </scripts>
