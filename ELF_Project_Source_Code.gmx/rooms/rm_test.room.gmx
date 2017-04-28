@@ -66,6 +66,13 @@
     <instance objName="obj_wall" x="1184" y="160" name="inst_321F5AFF" locked="0" code="" scaleX="2" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="1120" y="384" name="inst_E0A56892" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ledge" x="1152" y="384" name="inst_226308D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="125" y="430" name="inst_F3F794CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bird_spawner" x="256" y="256" name="inst_50A757AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="659" y="430" name="inst_20B71552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="954" y="431" name="inst_9A24F755" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="1333" y="430" name="inst_2C6230DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="470" y="302" name="inst_F16BB7F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_big_tree" x="944" y="175" name="inst_EF93920B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background13" x="0" y="64" w="32" h="32" xo="0" yo="0" id="10000162" name="inst_94BBAD9B" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

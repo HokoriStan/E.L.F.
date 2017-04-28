@@ -28,12 +28,12 @@ if(grounded)
         case 1://Crouching
             sprite_index = spr_elf_crouch;
             image_speed = 0;
-            if(crouch_index<24)crouch_index++;
+            if(crouch_index<=12)crouch_index++;
             
-            if(crouch_index<=5)image_index = 0;
-            if(crouch_index>=6 && crouch_index<=11)image_index = 1;
-            if(crouch_index>=12 && crouch_index<=17)image_index = 2;
-            if(crouch_index>=18 && crouch_index<=23)image_index = 3;
+            if(crouch_index<=3)image_index = 0;
+            if(crouch_index>=4 && crouch_index<=7)image_index = 1;
+            if(crouch_index>=8 && crouch_index<=11)image_index = 2;
+            if(crouch_index>=12)image_index = 3;
         break;
         
         case 2://Un-Crouching
