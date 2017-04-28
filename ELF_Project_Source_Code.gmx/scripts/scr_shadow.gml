@@ -7,7 +7,7 @@ var spr_height = sprite_get_height(sprite)/2;
 var y_point = 0;
 var alpha = 0.7;
 
-while(!place_meeting(x,y+y_point,obj_wall)&&!place_meeting(x,y+y_point,obj_ledge))&&(y_point<150)
+while(!place_meeting(x,y+y_point,obj_wall)&&!place_meeting(x,y+y_point,obj_ledge))&&(y_point<room_height)
 {
     y_point++;
 }

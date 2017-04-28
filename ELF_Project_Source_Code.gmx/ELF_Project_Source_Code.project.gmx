@@ -21,6 +21,7 @@
     </sprites>
     <sprites name="Animals">
       <sprite>sprites\spr_bunny</sprite>
+      <sprite>sprites\spr_bird</sprite>
     </sprites>
     <sprites name="Wall">
       <sprite>sprites\spr_wall</sprite>
@@ -39,6 +40,10 @@
         <sprite>sprites\spr_ray_small</sprite>
         <sprite>sprites\spr_forest_strip</sprite>
       </sprites>
+    </sprites>
+    <sprites name="Trees">
+      <sprite>sprites\spr_tree_big</sprite>
+      <sprite>sprites\spr_tree_dead</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -77,6 +82,7 @@
     <font>fonts\fnt_general</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_debugger</object>
     <objects name="Player">
       <object>objects\obj_player</object>
     </objects>
@@ -89,6 +95,11 @@
         <object>objects\obj_bunny_spawner</object>
         <object>objects\obj_bunny</object>
       </objects>
+      <objects name="Birds">
+        <object>objects\obj_bird_spawner</object>
+        <object>objects\obj_bird</object>
+        <object>objects\obj_bird_follow</object>
+      </objects>
     </objects>
     <objects name="Camera">
       <object>objects\obj_camera</object>
@@ -98,7 +109,10 @@
       <object>objects\obj_ray_spawner</object>
       <object>objects\obj_ray</object>
     </objects>
-    <object>objects\obj_debugger</object>
+    <objects name="Trees">
+      <object>objects\obj_tree</object>
+      <object>objects\obj_big_tree</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
