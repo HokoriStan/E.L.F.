@@ -12,4 +12,5 @@ if(place_meeting(x,y+vsp,obj_ledge)&&ledge!=noone&&bbox_bottom<=ledge.bbox_top&&
         y += sign(vsp);
     }
     vsp = 0;
+    if(state==3)state = 0;
 }

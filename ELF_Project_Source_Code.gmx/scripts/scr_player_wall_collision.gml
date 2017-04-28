@@ -23,6 +23,7 @@ if(place_meeting(x,y+vsp,obj_wall))
         y += sign(vsp);
     }
     vsp = 0;
+    if(state==3)state=0;
 }
 y += vsp;
 
