@@ -13,8 +13,11 @@ move_speed = walk_speed;
 jump_speed = arg_jump_speed;
 air_jumps = arg_air_jumps;
 grav = arg_grav;
+move = 0;
 hsp = 0;
 vsp = 0;
+air_speed  = 0;
+air_speed_counter = 0;//this will add air speed when it hits a certain number
 
 //state
 state = 0;//zero meaning free
@@ -33,7 +36,7 @@ go_through = false;//for ledges
 sprinting = false;
 joystick_limit = false;
 wall_jump = false;
-wall_jump_recover = true;
+keep_ground_speed = false;
 
 //Direction
 dir = 1;
