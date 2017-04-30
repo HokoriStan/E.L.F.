@@ -4,6 +4,8 @@ var key_right_pressed = keyboard_check_pressed(vk_right);
 var limit = 1;
 if(sprinting)var air_limit = 4;
 else var air_limit = 2;
+
+
 if(air_speed_counter<-3||air_speed_counter>3)air_speed_counter=0;
 
 if(key_left_pressed)air_speed_counter = 0;

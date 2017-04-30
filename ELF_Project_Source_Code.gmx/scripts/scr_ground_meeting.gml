@@ -27,11 +27,13 @@ if(grounded)
     {
         vsp = -jump_speed;
         air_speed = hsp;
+        air_speed_counter = 0;
     }
 }
 else if(!grounded&&keep_ground_speed)
 {
     keep_ground_speed = false;
     air_speed = hsp;
+    air_speed_counter = 0;
 }
 
