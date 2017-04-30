@@ -10,7 +10,7 @@ else if(key_right_pressed)air_speed_counter = 0;
 
 if(key_left==-1)
 {
-    if(air_speed>-air_limit)
+    if(velocity>-air_limit)
     {
         air_speed_counter--;
         limit = 2;
@@ -18,7 +18,7 @@ if(key_left==-1)
 }
 else if(key_right==1)
 {
-    if(air_speed<air_limit)
+    if(velocity<air_limit)
     {
         air_speed_counter++;
         limit = 2;
@@ -27,26 +27,26 @@ else if(key_right==1)
 else
 {
     limit = 6;
-    if(air_speed>0)air_speed_counter--;
-    else if(air_speed<0)air_speed_counter++;
+    if(velocity>0)air_speed_counter--;
+    else if(velocity<0)air_speed_counter++;
 }
 
 
 if(air_speed_counter==-limit)
 {
-    if(air_speed>-air_limit)
+    if(velocity>-air_limit)
     {
-        air_speed--;
+        velocity--;
         air_speed_counter=0;
     }
 }
 if(air_speed_counter==limit)
 {
-    if(air_speed<air_limit)
+    if(velocity<air_limit)
     {
-        air_speed++;
+        velocity++;
         air_speed_counter=0;
     }
 }
 
-if(air_speed==-4||air_speed==4)sprinting = true;
+if(velocity==-4||velocity==4)sprinting = true;

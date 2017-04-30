@@ -6,14 +6,13 @@
 //Horizontal Movement
 if(!wall_jump)
 {
-    if(grounded)move = key_left + key_right;
-    else scr_air_speed_control();
+    if(grounded)scr_ground_speed_control();
+    else if(!grounded&&state==0)scr_air_speed_control();
 }
-//else move = wall_jump_dir;
 
 
-if(grounded)hsp = move * move_speed;
-else hsp = 1 * air_speed;
+hsp = 1 * velocity;
+
 
 //Direction
 if(hsp>0)dir = 1;

@@ -8,6 +8,7 @@ switch(state)
     
     case 1://Crouching
         hsp = 0;
+        //velocity = 0;
         sprinting = false;
         if(!grounded)state=0;
     break;

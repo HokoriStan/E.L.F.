@@ -70,7 +70,7 @@ if(alarm[1]==-1)
 
 
 
-
+/*
 
 //this deals with the speed whenever sprinting is true or false
 if(sprinting)move_speed = run_speed;

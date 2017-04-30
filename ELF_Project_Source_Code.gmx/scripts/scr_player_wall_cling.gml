@@ -26,10 +26,11 @@ if(cling_from_right||cling_from_left)
     if(key_jump)
     {
         alarm[3] = 10;
+        alarm[0] = 1;
         wall_jump = true;
         state = 0;
         vsp = -jump_speed;
-        if(cling_from_left)air_speed = 4;
-        if(cling_from_right)air_speed = -4;
+        if(cling_from_left)velocity = 4;
+        if(cling_from_right)velocity = -4;
     }
 }
