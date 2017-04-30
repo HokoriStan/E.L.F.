@@ -10,6 +10,8 @@ if(grounded)
             alarm[2]=5;
             go_through = true;
             grounded = false;
+            velocity = 0;
+            air_speed_counter = 0;
         }
     }
     else if(!key_down && state==1) state = 2;

@@ -192,7 +192,7 @@ scr_player_animation();
 scr_shadow(spr_elf_idle);
 draw_self();
 
-
+/*
 draw_text(x,y-32,velocity);
 draw_text(x,y-48,air_speed_counter);
 draw_text(x,y-64,alarm[0]);
