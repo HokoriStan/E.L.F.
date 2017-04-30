@@ -12,6 +12,7 @@ if(place_meeting(x+hsp,y,obj_wall))
         x += sign(hsp);
     }
     hsp = 0;
+    air_speed = 0;
 }
 x += hsp;
 

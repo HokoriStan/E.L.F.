@@ -57,6 +57,8 @@
       <script>scripts\scr_player_init.gml</script>
       <script>scripts\scr_player_controls.gml</script>
       <script>scripts\scr_player_movement.gml</script>
+      <script>scripts\scr_ground_meeting.gml</script>
+      <script>scripts\scr_air_movement.gml</script>
       <script>scripts\scr_player_crouching.gml</script>
       <script>scripts\scr_player_states.gml</script>
       <script>scripts\scr_player_sprint.gml</script>
@@ -64,6 +66,8 @@
       <script>scripts\scr_player_wall_cling.gml</script>
       <script>scripts\scr_player_ledge_collision.gml</script>
       <script>scripts\scr_player_animation.gml</script>
+      <script>scripts\scr_air_speed_control.gml</script>
+      <script>scripts\scr_ground_speed_control.gml</script>
     </scripts>
     <scripts name="Animals">
       <scripts name="Bunnies">
