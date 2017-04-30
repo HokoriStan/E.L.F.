@@ -13,13 +13,15 @@ else
 }
 
 
+
+
 if(grounded)
 {
     wall_jump_recover = true;
     keep_ground_speed = true;
     air_jumps = 1;
-    air_speed = 0;
-    air_speed_counter = 0;
+    //air_speed = 0;
+    //air_speed_counter = 0;
     alarm[0] = -1;
     if(key_jump&&!key_down)//Performs the jump
     {

@@ -16,7 +16,7 @@ grav = arg_grav;
 move = 0;
 hsp = 0;
 vsp = 0;
-air_speed  = 0;
+velocity = 0;
 air_speed_counter = 0;//this will add air speed when it hits a certain number
 
 //state
