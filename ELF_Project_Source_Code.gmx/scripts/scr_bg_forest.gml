@@ -1,4 +1,4 @@
-///scr_parallax
+///scr_bg_forest
 draw_set_color(c_white);
 var width = room_width div sprite_get_width(spr_forest_depth1);
 width = width*2;
@@ -23,6 +23,3 @@ for(var i=0;i<width;i++)
 }
 draw_rectangle_colour(0,0,room_width,(room_height-380)+(parallax_y/2.5),color3,color3,color3,color3,false);
 
-
-
-//draw_text(view_xview[0]+160,view_yview[0]+32,width);

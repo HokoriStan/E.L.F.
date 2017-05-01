@@ -77,8 +77,8 @@
         <script>scripts\scr_bunny_wall_collision.gml</script>
       </scripts>
     </scripts>
-    <scripts name="Camera">
-      <script>scripts\scr_parallax.gml</script>
+    <scripts name="Background">
+      <script>scripts\scr_bg_forest.gml</script>
     </scripts>
     <script>scripts\scr_shadow.gml</script>
   </scripts>
@@ -116,6 +116,9 @@
     <objects name="Trees">
       <object>objects\obj_tree</object>
       <object>objects\obj_big_tree</object>
+    </objects>
+    <objects name="Background">
+      <object>objects\obj_background</object>
     </objects>
   </objects>
   <rooms name="rooms">
