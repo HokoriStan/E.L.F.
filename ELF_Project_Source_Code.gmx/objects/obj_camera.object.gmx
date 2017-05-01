@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>100</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -35,6 +35,7 @@ up_border = false;
 down_border = false;
 
 view = 0;
+timer = 0;
 </string>
           </argument>
         </arguments>
@@ -57,7 +58,10 @@ view = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>distance_x = distance_to_point(obj_camera_follow.x,y);
+            <string>var view_w = view_wview[0];
+var view_h = view_hview[0];
+
+distance_x = distance_to_point(obj_camera_follow.x,y);
 distance_y = distance_to_point(x,obj_camera_follow.y);
 
 if(obj_camera_follow.x&lt;x)x -= distance_x div 10;//6
@@ -79,40 +83,42 @@ else
 }
 
 //--------------------------------------------X_CAMERA------------------------------------
-if(x&lt;room_width-display_w/2)right_border = false;//136
+if(x&lt;room_width-view_wview[0]/2)right_border = false;//136
 else right_border = true;
 
-if(x&gt;display_w/2)left_border = false;//120
+if(x&gt;view_wview[0]/2)left_border = false;//120
 else left_border = true;
 
 if(!right_border&amp;&amp;!left_border)
 {
-    x_limit = x-view_wview[view]/2;
+    x_limit = x-view_w/2;
 }
 else if(right_border&amp;&amp;!left_border)
 {
-    x_limit = room_width-display_w;//-256
+    x_limit = room_width-view_w;//-256
+    timer = 0;
 }
 else if(!right_border&amp;&amp;left_border)
 {
     x_limit = 0;
+    timer = 0;
 }
 view_xview[0] = x_limit+xx;
 
 //---------------------------------------------Y_CAMERA---------------------------
-if(y&lt;room_height-display_h/2)down_border = false;//465,576,-115,-67
+if(y&lt;room_height-view_h/2)down_border = false;//465,576,-115,-67
 else down_border = true;
 
-if(y&gt;display_h/2)up_border = false;//100,67
+if(y&gt;view_h/2)up_border = false;//100,67
 else up_border = true;
 
 if(!down_border&amp;&amp;!up_border)
 {
-    y_limit = y-view_hview[view]/2;
+    y_limit = y-view_h/2;
 }
 else if(down_border&amp;&amp;!up_border)
 {
-    y_limit = room_height-display_h;
+    y_limit = room_height-view_h;
 }
 else if(!down_border&amp;&amp;up_border)
 {
@@ -121,10 +127,27 @@ else if(!down_border&amp;&amp;up_border)
 view_yview[0] = y_limit+yy;
 
 
+//var ratio = display_w/display_h;
+if(obj_player.sprinting)
+{
+    if(timer&lt;30)timer++;
+}
+else
+{
+    timer = 0;
+}
 
 
-scr_parallax();
-
+if(timer==30)
+{
+    if(view_w&lt;display_w)view_wview[0]+=1;
+    if(view_h&lt;display_h)view_hview[0]+=0.5;
+}
+else
+{
+    if(view_w&gt;display_w-80)view_wview[0]-=1;
+    if(view_h&gt;display_h-40)view_hview[0]-=0.5;
+}
 </string>
           </argument>
         </arguments>
@@ -147,7 +170,8 @@ scr_parallax();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_parallax();
+            <string>
+draw_set_color(c_white);
 
 /*
 var color = make_colour_hsv(75,99,182);
